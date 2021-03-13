@@ -25,6 +25,8 @@ RUN pip install --quiet jupyter-offlinenotebook
 RUN pip install --quiet -U kaleido
 # Language server
 RUN pip install --quiet jupyterlab-lsp
+# fix jedi version mismatch
+RUN pip install jedi==0.17.2
 
 # install code formatter
 RUN pip install --quiet jupyterlab_code_formatter isort black
