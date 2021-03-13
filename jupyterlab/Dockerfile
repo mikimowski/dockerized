@@ -22,12 +22,8 @@ RUN pip install --quiet -U kaleido
 RUN pip install --quiet jedi==0.17.2
 RUN pip install --quiet python-language-server
 RUN pip install --quiet jupyterlab-lsp
-# fix jedi version mismatch
-RUN pip install jedi==0.17.2
 
 # install code formatter
-RUN pip install --quiet jupyterlab_code_formatter isort black
-
 RUN pip install --quiet jupyterlab_code_formatter isort black
 
 # install Jupyter Lab extensions you need
