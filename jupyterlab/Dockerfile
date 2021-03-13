@@ -26,6 +26,9 @@ RUN pip install --quiet -U kaleido
 # Language server
 RUN pip install --quiet jupyterlab-lsp
 
+# install code formatter
+RUN pip install --quiet jupyterlab_code_formatter isort black
+
 # install Jupyter Lab extensions you need
 RUN jupyter labextension install jupyterlab-plotly --no-build
 RUN jupyter labextension install jupyter-offlinenotebook --no-build
