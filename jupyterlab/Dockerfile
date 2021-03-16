@@ -5,7 +5,7 @@ LABEL description="JupyterLab Env"
 #RUN pip install --upgrade jupyterlab
 
 RUN conda install --quiet --yes -c conda-forge xeus-python
-RUN conda install --quiet --yes -c conda-forge plotly 
+RUN conda install --quiet --yes -c conda-forge plotly
 # Language server
 RUN conda clean --all -f -y
 
