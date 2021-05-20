@@ -5,7 +5,7 @@ LABEL description="JupyterLab Env"
 #RUN pip install --upgrade jupyterlab
 
 RUN conda install --quiet --yes -c conda-forge xeus-python
-RUN conda install --quiet --yes -c conda-forge plotly 
+RUN conda install --quiet --yes -c conda-forge plotly
 # Language server
 RUN conda clean --all -f -y
 
@@ -22,6 +22,7 @@ RUN pip install --quiet -U kaleido
 RUN pip install --quiet jedi==0.17.2
 RUN pip install --quiet python-language-server
 RUN pip install --quiet jupyterlab-lsp
+RUN pip install --quiet pydocstyle pycodestyle mccabe pyflakes pylint rope yapf autopep8
 
 # install code formatter
 RUN pip install --quiet jupyterlab_code_formatter isort black
